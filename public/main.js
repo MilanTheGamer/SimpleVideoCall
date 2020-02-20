@@ -24,19 +24,15 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 { urls: 'stun:global.stun.twilio.com:3478?transport=udp' },
 
                 // Turn Servers
-                {
-                    url: 'turn:192.158.29.39:3478?transport=udp',
-                    credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
-                    username: '28224511:1379330808'
-                },
+
                  {
-                    url: 'turn:turn.anyfirewall.com:443?transport=udp',
+                    url: 'turn:turn.anyfirewall.com:443?transport=tcp',
                     credential: 'webrtc',
                     username: 'webrtc'
                 },
                 {
                     "urls": [
-                    "turn:13.250.13.83:3478?transport=udp"
+                    "turn:13.250.13.83:3478?transport=tcp"
                     ],
                     "username": "YzYNCouZM1mhqhmseWk6",
                     "credential": "YzYNCouZM1mhqhmseWk6"

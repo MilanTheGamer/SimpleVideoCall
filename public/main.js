@@ -20,7 +20,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 { url: 'stun:stun1.l.google.com:19302' },
                 { url: 'stun2.l.google.com:19302' },
                 { url: 'stun.ekiga.net' },
-                 { urls: 'stun:global.stun.twilio.com:3478?transport=udp' }
+                { urls: 'stun:global.stun.twilio.com:3478?transport=udp' }
                 ] 
             }, stream:stream, trickle:false})
         peer.on("stream", stream => {

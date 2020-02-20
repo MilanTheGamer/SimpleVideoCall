@@ -43,7 +43,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                     "credential": "YzYNCouZM1mhqhmseWk6"
                 },
                 ] 
-            }, stream:stream, trickle:false, iceTransportPolicy: 'relay', reconnectTimer: 3000})
+            }, stream:stream, trickle:true, iceTransportPolicy: 'relay', reconnectTimer: 3000})
         peer.on("stream", stream => {
             CreateVideo(stream)
         });

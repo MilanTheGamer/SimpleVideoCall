@@ -19,10 +19,8 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 // Stun Servers
                 { urls: 'stun:stun.l.google.com:19302' },
                 { url: 'stun:stun1.l.google.com:19302' },
-                { url: 'stun2.l.google.com:19302' },
-                { url: 'stun.ekiga.net' },
+                { url: 'stun:stun2.l.google.com:19302' },
                 // Turn Servers
-                
                 {
                     url: 'turn:192.158.29.39:3478?transport=udp',
                     credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
@@ -33,17 +31,9 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                     url: 'turn:192.158.29.39:3478?transport=udp',
                     credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
                     username: '28224511:1379330808'
-                },
-
-                {
-                    "urls": [
-                    "turn:13.250.13.83:3478?transport=udp"
-                    ],
-                    "username": "YzYNCouZM1mhqhmseWk6",
-                    "credential": "YzYNCouZM1mhqhmseWk6"
                 },
                 ] 
-            }, stream:stream, trickle:true, iceTransportPolicy: 'relay', reconnectTimer: 3000})
+            }, stream:stream, trickle:false, iceTransportPolicy: 'relay', reconnectTimer: 3000})
         peer.on("stream", stream => {
             CreateVideo(stream)
         });

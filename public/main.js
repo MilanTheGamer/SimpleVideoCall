@@ -33,7 +33,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                     username: '28224511:1379330808'
                 },
                 ] 
-            }, stream:stream, trickle:false, iceTransportPolicy: 'relay', reconnectTimer: 3000})
+            }, stream:stream, trickle:true, iceTransportPolicy: 'relay', reconnectTimer: 3000})
         peer.on("stream", stream => {
             CreateVideo(stream)
         });

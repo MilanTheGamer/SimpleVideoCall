@@ -19,7 +19,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 // Stun Servers
                 // { url: 'stun:stun.l.google.com:19302' },
                 // { url: 'stun:stun1.l.google.com:19302' },
-                // { url: 'stun:stun2.l.google.com:19302' },
+                { url: 'stun:stun2.l.google.com:19302' },
                 {
                     url:"stun:numb.viagenie.ca?transport=udp",
                     username:"milanthegamer@gmail.com",

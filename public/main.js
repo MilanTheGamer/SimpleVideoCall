@@ -19,6 +19,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 // Stun Servers
                 // { url: 'stun:stun.l.google.com:19302' },
                 // { url: 'stun:stun1.l.google.com:19302' },
+                // { url: 'stun:stun2.l.google.com:19302' },
                 {
                     url:"stun:numb.viagenie.ca",
                     username:"milanthegamer@gmail.com",
@@ -28,12 +29,7 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
                 // Turn Servers
                 
                 {
-                    url:"turn:numb.viagenie.ca?transport=udp",
-                    username:"milanthegamer@gmail.com",
-                    credential:"Milan@123"
-                },
-                {
-                    url:"turn:numb.viagenie.ca?transport=tcp",
+                    url:"turn:numb.viagenie.ca",
                     username:"milanthegamer@gmail.com",
                     credential:"Milan@123"
                 },

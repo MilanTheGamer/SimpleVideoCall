@@ -8201,7 +8201,39 @@ navigator.mediaDevices.getUserMedia({ video:true, audio:true })
 
     // used to initialize a peer
     function InitPeer(type){
-        let peer = new Peer({initiator:(type == "init") ? true : false, config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:global.stun.twilio.com:3478?transport=udp' }] }, stream:stream, trickle:true})
+        let peer = new Peer({initiator:(type == "init") ? true : false, config: { 
+            iceServers: [
+                // Stun Servers
+                // { url: 'stun:stun.l.google.com:19302' },
+                // { url: 'stun:stun1.l.google.com:19302' },
+                // { url: 'stun:stun2.l.google.com:19302' },
+                {
+                    url:"stun:numb.viagenie.ca",
+                    username:"milanthegamer@gmail.com",
+                    credential:"Milan@123"
+                },
+                
+                // Turn Servers
+                
+                {
+                    url:"turn:numb.viagenie.ca",
+                    username:"milanthegamer@gmail.com",
+                    credential:"Milan@123"
+                },
+
+                // {
+                //     url: 'turn:192.158.29.39:3478?transport=udp',
+                //     credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+                //     username: '28224511:1379330808'
+                // },
+
+                // {gi
+                //     url: 'turn:192.158.29.39:3478?transport=udp',
+                //     credential: 'JZEOEt2V3Qb0y27GRntt2u2PAYA=',
+                //     username: '28224511:1379330808'
+                // },
+                ] 
+            }, stream:stream, trickle:false, iceTransportPolicy: 'relay', reconnectTimer: 3000})
         peer.on("stream", stream => {
             CreateVideo(stream)
         });
